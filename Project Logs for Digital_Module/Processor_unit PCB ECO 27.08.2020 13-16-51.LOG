@@ -1,0 +1,8 @@
+Added Component: Designator=X12(PLD2-50)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Назначение"; Value = "Header, 20-Pin, Dual row"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Наименование"; Value = "PLD2-50"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Потребление, Вт"; Value = "0,0"; VariantName = "[No Variations]"
+Change Class Name : Old Net Name=Designator New Net Name=Digital_module
+Added Class: Name=Device_unit
+Added Room: Name=Device_unit

@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=ADC_IN_6 Pin=X2-6
+Removed Pin From Net: NetName=ADC_IN_8 Pin=X2-8
+Removed Pin From Net: NetName=DAC_OUT_1 Pin=X3-17
+Removed Pin From Net: NetName=DAC_OUT_2 Pin=X3-18
+Removed Member From Class: ClassName=USB Member=X4
+Removed Member From Class: ClassName=Module_main Member=X8
+Removed Member From Class: ClassName=Designator Member=X10
+Change Component Designator: OldDesignator=X2 NewDesignator=X9
+Change Component Designator: OldDesignator=X3 NewDesignator=X10
+Change Component Designator: OldDesignator=X4 NewDesignator=X11
+Change Component Designator: OldDesignator=X5 NewDesignator=X2
+Change Component Designator: OldDesignator=X6 NewDesignator=X3
+Change Component Designator: OldDesignator=X7 NewDesignator=X4
+Change Component Designator: OldDesignator=X8 NewDesignator=X5
+Change Component Designator: OldDesignator=X9 NewDesignator=X6
+Change Component Designator: OldDesignator=X10 NewDesignator=X7
+Change Component Designator: OldDesignator=X11 NewDesignator=X8
+Added Pin To Net: NetName=ADC_IN_8 Pin=X9-6
+Added Pin To Net: NetName=ADC_IN_6 Pin=X9-8
+Added Pin To Net: NetName=DAC_OUT_2 Pin=X10-17
+Added Pin To Net: NetName=DAC_OUT_1 Pin=X10-18
+Change Net Name : Old Net Name=ADC_IN_8 New Net Name=ADC_IN_6
+Change Net Name : Old Net Name=DAC_OUT_2 New Net Name=DAC_OUT_1
+Added Member To Class: ClassName=Designator Member=Component X2 SD-card
+Added Member To Class: ClassName=Designator Member=Component X3 Header 2X6
+Added Member To Class: ClassName=Designator Member=Component X5 Header 2X4
+Added Member To Class: ClassName=USB Member=Component X6 mico-BF
+Added Member To Class: ClassName=Module_main Member=Component X9 Header 2X10
+Added Member To Class: ClassName=Module_main Member=Component X11 Header 2X10

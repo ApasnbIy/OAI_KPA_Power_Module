@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=GPIO_CPU_57 Pin=U4-69
+Added Pin To Net: NetName=SPI_CLK Pin=U4-69

@@ -1,0 +1,17 @@
+Removed Member From Class: ClassName=USB Member=X2
+Removed Member From Class: ClassName=Module_main Member=X3
+Removed Member From Class: ClassName=USB Member=X3
+Removed Member From Class: ClassName=Module_main Member=X4
+Removed Member From Class: ClassName=USB Member=X4
+Removed Member From Class: ClassName=Designator Member=X8
+Removed Member From Class: ClassName=Module_main Member=X8
+Added Pin To Net: NetName=ADC_IN_8 Pin=R8-2
+Added Pin To Net: NetName=ADC_IN_8 Pin=X9-6
+Added Net: Name=ADC_IN_8
+Added Member To Class: ClassName=Designator Member=Component X5 Header 2X4
+Added Member To Class: ClassName=USB Member=Component X6 mico-BF
+Added Member To Class: ClassName=USB Member=Component X7 Header 2X1
+Added Member To Class: ClassName=USB Member=Component X8 Header 2X1
+Added Member To Class: ClassName=Module_main Member=Component X9 Header 2X10
+Added Member To Class: ClassName=Module_main Member=Component X10 Header 2X10
+Added Member To Class: ClassName=Module_main Member=Component X11 Header 2X10

@@ -1,0 +1,166 @@
+Removed Pin From Net: NetName=3.3V Pin=C15-2
+Removed Pin From Net: NetName=A_GND Pin=C19-1
+Removed Pin From Net: NetName=A_GND Pin=C20-1
+Removed Pin From Net: NetName=3.3V Pin=C23-2
+Removed Pin From Net: NetName=GND Pin=C24-1
+Removed Pin From Net: NetName=GND Pin=C25-1
+Removed Pin From Net: NetName=GND Pin=C26-1
+Removed Pin From Net: NetName=GND Pin=C27-1
+Removed Pin From Net: NetName=GND Pin=C28-1
+Removed Pin From Net: NetName=GND Pin=C29-1
+Removed Pin From Net: NetName=GND Pin=C30-1
+Removed Pin From Net: NetName=GND Pin=C31-1
+Removed Pin From Net: NetName=GND Pin=C32-1
+Removed Pin From Net: NetName=GND Pin=C33-1
+Removed Pin From Net: NetName=GND Pin=C34-1
+Removed Pin From Net: NetName=GND Pin=C35-1
+Removed Pin From Net: NetName=GND Pin=C36-1
+Removed Pin From Net: NetName=GND Pin=C37-1
+Removed Pin From Net: NetName=GND Pin=C38-1
+Removed Pin From Net: NetName=GND Pin=D1-2
+Removed Pin From Net: NetName=GND Pin=D2-2
+Removed Pin From Net: NetName=GND Pin=D3-2
+Removed Pin From Net: NetName=GND Pin=GK1-2
+Removed Pin From Net: NetName=SPI_MOSI Pin=R26-2
+Removed Pin From Net: NetName=GND Pin=R40-2
+Removed Pin From Net: NetName=GPIO_10 Pin=R57-2
+Removed Pin From Net: NetName=GPIO_12 Pin=R59-2
+Removed Pin From Net: NetName=GPIO_14 Pin=R61-2
+Removed Pin From Net: NetName=GPIO_16 Pin=R63-2
+Removed Pin From Net: NetName=GPIO_18 Pin=R65-2
+Removed Pin From Net: NetName=GPIO_20 Pin=R67-2
+Removed Pin From Net: NetName=GPIO_22 Pin=R69-2
+Removed Pin From Net: NetName=GPIO_24 Pin=R71-2
+Removed Pin From Net: NetName=GPIO_26 Pin=R73-2
+Removed Pin From Net: NetName=GPIO_28 Pin=R75-2
+Removed Pin From Net: NetName=GPIO_30 Pin=R77-2
+Removed Pin From Net: NetName=GPIO_32 Pin=R79-2
+Removed Pin From Net: NetName=GPIO_34 Pin=R81-2
+Removed Pin From Net: NetName=GPIO_36 Pin=R83-2
+Removed Pin From Net: NetName=GPIO_38 Pin=R85-2
+Removed Pin From Net: NetName=GPIO_40 Pin=R87-2
+Removed Pin From Net: NetName=GPIO_42 Pin=R89-2
+Removed Pin From Net: NetName=GPIO_44 Pin=R91-2
+Removed Pin From Net: NetName=GPIO_46 Pin=R93-2
+Removed Pin From Net: NetName=GPIO_48 Pin=R95-2
+Removed Pin From Net: NetName=GPIO_50 Pin=R97-2
+Removed Pin From Net: NetName=GPIO_52 Pin=R99-2
+Removed Pin From Net: NetName=GPIO_54 Pin=R101-2
+Removed Pin From Net: NetName=GPIO_56 Pin=R103-2
+Removed Pin From Net: NetName=GPIO_58 Pin=R105-2
+Removed Pin From Net: NetName=GPIO_60 Pin=R107-2
+Removed Pin From Net: NetName=3.3V Pin=U1-6
+Removed Pin From Net: NetName=A_GND Pin=U2-5
+Removed Pin From Net: NetName=3.3V Pin=U3-2
+Removed Pin From Net: NetName=3.3V Pin=U3-6
+Removed Pin From Net: NetName=GND Pin=U4-16
+Removed Pin From Net: NetName=GND Pin=U4-24
+Removed Pin From Net: NetName=A_GND Pin=U4-31
+Removed Pin From Net: NetName=GND Pin=U4-38
+Removed Pin From Net: NetName=GND Pin=U4-51
+Removed Pin From Net: NetName=GND Pin=U4-61
+Removed Pin From Net: NetName=GND Pin=U4-83
+Removed Pin From Net: NetName=GND Pin=U4-94
+Removed Pin From Net: NetName=GND Pin=U4-107
+Removed Pin From Net: NetName=GND Pin=U4-120
+Removed Pin From Net: NetName=GND Pin=U4-130
+Removed Pin From Net: NetName=GND Pin=X1-B1
+Removed Pin From Net: NetName=GND Pin=X1-B4
+Removed Pin From Net: NetName=ADC_IN_6 Pin=X2-6
+Removed Pin From Net: NetName=2V048 Pin=X2-9
+Removed Pin From Net: NetName=3.3V Pin=X3-4
+Removed Pin From Net: NetName=CAN_TX Pin=X3-12
+Removed Pin From Net: NetName=I2C_DIO Pin=X3-13
+Removed Pin From Net: NetName=I2C_CLK Pin=X3-14
+Removed Pin From Net: NetName=DAC_OUT_1 Pin=X3-17
+Removed Pin From Net: NetName=DAC_OUT_2 Pin=X3-18
+Removed Pin From Net: NetName=3.3V Pin=X4-3
+Removed Pin From Net: NetName=3.3V Pin=X4-4
+Removed Pin From Net: NetName=+5V Pin=X4-7
+Removed Pin From Net: NetName=+5V Pin=X4-8
+Removed Pin From Net: NetName=-5V Pin=X4-9
+Removed Pin From Net: NetName=-5V Pin=X4-10
+Removed Pin From Net: NetName=GND Pin=X5-6
+Removed Pin From Net: NetName=GND Pin=X5-Gd
+Removed Pin From Net: NetName=GND Pin=X5-MP0
+Removed Pin From Net: NetName=GND Pin=X5-MP0
+Removed Pin From Net: NetName=GND Pin=X5-MP0
+Removed Pin From Net: NetName=GND Pin=X5-MP0
+Removed Pin From Net: NetName=GND Pin=X5-MP0
+Removed Pin From Net: NetName=GND Pin=X5-MP0
+Added Pin To Net: NetName=GND Pin=R23-2
+Added Pin To Net: NetName=GND Pin=R26-2
+Added Pin To Net: NetName=A_GND Pin=R27-2
+Added Pin To Net: NetName=ADC_IN_6 Pin=X2-8
+Added Pin To Net: NetName=CAN_TX Pin=X2-9
+Added Pin To Net: NetName=-5V Pin=X3-3
+Added Pin To Net: NetName=+5V Pin=X3-5
+Added Pin To Net: NetName=3.3V Pin=X3-9
+Added Pin To Net: NetName=2V048 Pin=X3-12
+Added Pin To Net: NetName=I2C_CLK Pin=X3-15
+Added Pin To Net: NetName=I2C_DIO Pin=X3-16
+Added Pin To Net: NetName=DAC_OUT_2 Pin=X3-17
+Added Pin To Net: NetName=DAC_OUT_1 Pin=X3-18
+Change Net Name : Old Net Name=A_GND New Net Name=AGND
+Change Net Name : Old Net Name=DAC_OUT_2 New Net Name=DAC_OUT_1
+Added Pin To Net: NetName=A_GND Pin=C19-1
+Added Pin To Net: NetName=A_GND Pin=C20-1
+Added Pin To Net: NetName=A_GND Pin=U2-5
+Added Pin To Net: NetName=A_GND Pin=U4-31
+Added Pin To Net: NetName=A_GND Pin=X3-11
+Added Net: Name=A_GND
+Added Pin To Net: NetName=NetR57_2 Pin=R57-2
+Added Net: Name=NetR57_2
+Added Pin To Net: NetName=NetR59_2 Pin=R59-2
+Added Net: Name=NetR59_2
+Added Pin To Net: NetName=NetR61_2 Pin=R61-2
+Added Net: Name=NetR61_2
+Added Pin To Net: NetName=NetR63_2 Pin=R63-2
+Added Net: Name=NetR63_2
+Added Pin To Net: NetName=NetR65_2 Pin=R65-2
+Added Net: Name=NetR65_2
+Added Pin To Net: NetName=NetR67_2 Pin=R67-2
+Added Net: Name=NetR67_2
+Added Pin To Net: NetName=NetR69_2 Pin=R69-2
+Added Net: Name=NetR69_2
+Added Pin To Net: NetName=NetR71_2 Pin=R71-2
+Added Net: Name=NetR71_2
+Added Pin To Net: NetName=NetR73_2 Pin=R73-2
+Added Net: Name=NetR73_2
+Added Pin To Net: NetName=NetR75_2 Pin=R75-2
+Added Net: Name=NetR75_2
+Added Pin To Net: NetName=NetR77_2 Pin=R77-2
+Added Net: Name=NetR77_2
+Added Pin To Net: NetName=NetR79_2 Pin=R79-2
+Added Net: Name=NetR79_2
+Added Pin To Net: NetName=NetR81_2 Pin=R81-2
+Added Net: Name=NetR81_2
+Added Pin To Net: NetName=NetR83_2 Pin=R83-2
+Added Net: Name=NetR83_2
+Added Pin To Net: NetName=NetR85_2 Pin=R85-2
+Added Net: Name=NetR85_2
+Added Pin To Net: NetName=NetR87_2 Pin=R87-2
+Added Net: Name=NetR87_2
+Added Pin To Net: NetName=NetR89_2 Pin=R89-2
+Added Net: Name=NetR89_2
+Added Pin To Net: NetName=NetR91_2 Pin=R91-2
+Added Net: Name=NetR91_2
+Added Pin To Net: NetName=NetR93_2 Pin=R93-2
+Added Net: Name=NetR93_2
+Added Pin To Net: NetName=NetR95_2 Pin=R95-2
+Added Net: Name=NetR95_2
+Added Pin To Net: NetName=NetR97_2 Pin=R97-2
+Added Net: Name=NetR97_2
+Added Pin To Net: NetName=NetR99_2 Pin=R99-2
+Added Net: Name=NetR99_2
+Added Pin To Net: NetName=NetR101_2 Pin=R101-2
+Added Net: Name=NetR101_2
+Added Pin To Net: NetName=NetR103_2 Pin=R103-2
+Added Net: Name=NetR103_2
+Added Pin To Net: NetName=NetR105_2 Pin=R105-2
+Added Net: Name=NetR105_2
+Added Pin To Net: NetName=NetR107_2 Pin=R107-2
+Added Net: Name=NetR107_2
+Change Class Name : Old Net Name=main New Net Name=Designator
+Added Class: Name=Module_main
+Added Room: Name=Module_main

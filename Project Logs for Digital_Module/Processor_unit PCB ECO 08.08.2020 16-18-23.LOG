@@ -1,0 +1,321 @@
+Removed Pin From Net: NetName=GND Pin=TP1-0
+Removed Pin From Net: NetName=GND Pin=TP2-0
+Removed Pin From Net: NetName=GND Pin=TP3-0
+Removed Pin From Net: NetName=GND Pin=TP4-0
+Removed Pin From Net: NetName=GND Pin=TP5-0
+Removed Pin From Net: NetName=GND Pin=TP6-0
+Removed Pin From Net: NetName=GND Pin=TP7-0
+Removed Pin From Net: NetName=GND Pin=TP8-0
+Removed Pin From Net: NetName=GND Pin=TP9-0
+Removed Pin From Net: NetName=GND Pin=TP10-0
+Removed Pin From Net: NetName=GND Pin=TP11-0
+Removed Pin From Net: NetName=GND Pin=TP12-0
+Removed Pin From Net: NetName=GND Pin=TP13-0
+Removed Pin From Net: NetName=GND Pin=TP14-0
+Removed Pin From Net: NetName=GND Pin=TP15-0
+Removed Pin From Net: NetName=GND Pin=TP16-0
+Removed Pin From Net: NetName=GND Pin=TP17-0
+Removed Pin From Net: NetName=GND Pin=TP18-0
+Removed Pin From Net: NetName=GND Pin=TP19-0
+Removed Pin From Net: NetName=GND Pin=TP20-0
+Removed Pin From Net: NetName=GND Pin=TP21-0
+Removed Pin From Net: NetName=GND Pin=TP22-0
+Removed Pin From Net: NetName=GND Pin=TP23-0
+Removed Pin From Net: NetName=GND Pin=TP24-0
+Removed Pin From Net: NetName=GND Pin=TP25-0
+Removed Pin From Net: NetName=GND Pin=TP26-0
+Removed Pin From Net: NetName=GND Pin=TP27-0
+Removed Pin From Net: NetName=GND Pin=TP28-0
+Removed Pin From Net: NetName=GND Pin=TP29-0
+Removed Pin From Net: NetName=GND Pin=TP30-0
+Removed Pin From Net: NetName=GND Pin=TP31-0
+Removed Pin From Net: NetName=GND Pin=TP34-0
+Removed Pin From Net: NetName=GND Pin=TP37-0
+Removed Pin From Net: NetName=GND Pin=TP40-0
+Removed Pin From Net: NetName=GND Pin=TP43-0
+Removed Pin From Net: NetName=GND Pin=TP46-0
+Removed Pin From Net: NetName=GND Pin=TP49-0
+Removed Pin From Net: NetName=GND Pin=TP52-0
+Removed Pin From Net: NetName=GND Pin=TP55-0
+Removed Pin From Net: NetName=GND Pin=TP58-0
+Removed Pin From Net: NetName=GND Pin=TP61-0
+Removed Pin From Net: NetName=GND Pin=TP64-0
+Removed Pin From Net: NetName=GND Pin=TP67-0
+Removed Pin From Net: NetName=GND Pin=TP70-0
+Removed Pin From Net: NetName=GND Pin=TP73-0
+Removed Pin From Net: NetName=GND Pin=TP76-0
+Removed Pin From Net: NetName=GND Pin=TP79-0
+Removed Pin From Net: NetName=GND Pin=TP82-0
+Removed Pin From Net: NetName=GND Pin=TP85-0
+Removed Pin From Net: NetName=GND Pin=TP88-0
+Removed Pin From Net: NetName=GND Pin=TP91-0
+Removed Pin From Net: NetName=GND Pin=TP94-0
+Removed Pin From Net: NetName=ADC_IN_1 Pin=X2-1
+Removed Pin From Net: NetName=ADC_IN_2 Pin=X2-2
+Removed Pin From Net: NetName=ADC_IN_3 Pin=X2-3
+Removed Pin From Net: NetName=ADC_IN_4 Pin=X2-4
+Removed Pin From Net: NetName=ADC_IN_5 Pin=X2-5
+Removed Pin From Net: NetName=ADC_IN_6 Pin=X2-6
+Removed Pin From Net: NetName=ADC_IN_7 Pin=X2-7
+Removed Pin From Net: NetName=ADC_IN_8 Pin=X2-8
+Removed Pin From Net: NetName=2V048 Pin=X2-9
+Removed Pin From Net: NetName=A_GND Pin=X2-10
+Removed Pin From Net: NetName=GND Pin=X3-1
+Removed Pin From Net: NetName=GND Pin=X3-2
+Removed Pin From Net: NetName=UART_1_RX Pin=X3-3
+Removed Pin From Net: NetName=3.3V Pin=X3-4
+Removed Pin From Net: NetName=UART_1_TX Pin=X3-5
+Removed Pin From Net: NetName=GND Pin=X3-6
+Removed Pin From Net: NetName=SPI_MOSI Pin=X3-7
+Removed Pin From Net: NetName=SPI_CLK Pin=X3-8
+Removed Pin From Net: NetName=SPI_MISO Pin=X3-9
+Removed Pin From Net: NetName=GND Pin=X3-10
+Removed Pin From Net: NetName=CAN_RX Pin=X3-11
+Removed Pin From Net: NetName=CAN_TX Pin=X3-12
+Removed Pin From Net: NetName=I2C_DIO Pin=X3-13
+Removed Pin From Net: NetName=I2C_CLK Pin=X3-14
+Removed Pin From Net: NetName=UART_2_RX Pin=X3-15
+Removed Pin From Net: NetName=UART_2_TX Pin=X3-16
+Removed Pin From Net: NetName=DAC_OUT_1 Pin=X3-17
+Removed Pin From Net: NetName=DAC_OUT_2 Pin=X3-18
+Removed Pin From Net: NetName=A_GND Pin=X3-19
+Removed Pin From Net: NetName=A_GND Pin=X3-20
+Removed Pin From Net: NetName=GND Pin=X4-1
+Removed Pin From Net: NetName=GND Pin=X4-2
+Removed Pin From Net: NetName=3.3V Pin=X4-3
+Removed Pin From Net: NetName=3.3V Pin=X4-4
+Removed Pin From Net: NetName=GND Pin=X4-5
+Removed Pin From Net: NetName=GND Pin=X4-6
+Removed Pin From Net: NetName=+5V Pin=X4-7
+Removed Pin From Net: NetName=+5V Pin=X4-8
+Removed Pin From Net: NetName=-5V Pin=X4-9
+Removed Pin From Net: NetName=-5V Pin=X4-10
+Removed Pin From Net: NetName=GND Pin=X4-19
+Removed Pin From Net: NetName=GND Pin=X4-20
+Removed Member From Class: ClassName=main Member=TP1
+Removed Member From Class: ClassName=main Member=TP2
+Removed Member From Class: ClassName=main Member=TP3
+Removed Member From Class: ClassName=main Member=TP4
+Removed Member From Class: ClassName=main Member=TP5
+Removed Member From Class: ClassName=main Member=TP6
+Removed Member From Class: ClassName=main Member=TP7
+Removed Member From Class: ClassName=main Member=TP8
+Removed Member From Class: ClassName=main Member=TP9
+Removed Member From Class: ClassName=main Member=TP10
+Removed Member From Class: ClassName=main Member=TP11
+Removed Member From Class: ClassName=main Member=TP12
+Removed Member From Class: ClassName=main Member=TP13
+Removed Member From Class: ClassName=main Member=TP14
+Removed Member From Class: ClassName=main Member=TP15
+Removed Member From Class: ClassName=main Member=TP16
+Removed Member From Class: ClassName=main Member=TP17
+Removed Member From Class: ClassName=main Member=TP18
+Removed Member From Class: ClassName=main Member=TP19
+Removed Member From Class: ClassName=main Member=TP20
+Removed Member From Class: ClassName=main Member=TP21
+Removed Member From Class: ClassName=main Member=TP22
+Removed Member From Class: ClassName=main Member=TP23
+Removed Member From Class: ClassName=main Member=TP24
+Removed Member From Class: ClassName=main Member=TP25
+Removed Member From Class: ClassName=main Member=TP26
+Removed Member From Class: ClassName=main Member=TP27
+Removed Member From Class: ClassName=main Member=TP28
+Removed Member From Class: ClassName=main Member=TP29
+Removed Member From Class: ClassName=main Member=TP30
+Removed Member From Class: ClassName=main Member=TP31
+Removed Member From Class: ClassName=main Member=TP32
+Removed Member From Class: ClassName=main Member=TP33
+Removed Member From Class: ClassName=main Member=TP34
+Removed Member From Class: ClassName=main Member=TP35
+Removed Member From Class: ClassName=main Member=TP36
+Removed Member From Class: ClassName=main Member=TP37
+Removed Member From Class: ClassName=main Member=TP38
+Removed Member From Class: ClassName=main Member=TP39
+Removed Member From Class: ClassName=main Member=TP40
+Removed Member From Class: ClassName=main Member=TP41
+Removed Member From Class: ClassName=main Member=TP42
+Removed Member From Class: ClassName=main Member=TP43
+Removed Member From Class: ClassName=main Member=TP44
+Removed Member From Class: ClassName=main Member=TP45
+Removed Member From Class: ClassName=main Member=TP46
+Removed Member From Class: ClassName=main Member=TP47
+Removed Member From Class: ClassName=main Member=TP48
+Removed Member From Class: ClassName=main Member=TP49
+Removed Member From Class: ClassName=main Member=TP50
+Removed Member From Class: ClassName=main Member=TP51
+Removed Member From Class: ClassName=main Member=TP52
+Removed Member From Class: ClassName=main Member=TP53
+Removed Member From Class: ClassName=main Member=TP54
+Removed Member From Class: ClassName=main Member=TP55
+Removed Member From Class: ClassName=main Member=TP56
+Removed Member From Class: ClassName=main Member=TP57
+Removed Member From Class: ClassName=main Member=TP58
+Removed Member From Class: ClassName=main Member=TP59
+Removed Member From Class: ClassName=main Member=TP60
+Removed Member From Class: ClassName=main Member=TP61
+Removed Member From Class: ClassName=main Member=TP62
+Removed Member From Class: ClassName=main Member=TP63
+Removed Member From Class: ClassName=main Member=TP64
+Removed Member From Class: ClassName=main Member=TP65
+Removed Member From Class: ClassName=main Member=TP66
+Removed Member From Class: ClassName=main Member=TP67
+Removed Member From Class: ClassName=main Member=TP68
+Removed Member From Class: ClassName=main Member=TP69
+Removed Member From Class: ClassName=main Member=TP70
+Removed Member From Class: ClassName=main Member=TP71
+Removed Member From Class: ClassName=main Member=TP72
+Removed Member From Class: ClassName=main Member=TP73
+Removed Member From Class: ClassName=main Member=TP74
+Removed Member From Class: ClassName=main Member=TP75
+Removed Member From Class: ClassName=main Member=TP76
+Removed Member From Class: ClassName=main Member=TP77
+Removed Member From Class: ClassName=main Member=TP78
+Removed Member From Class: ClassName=main Member=TP79
+Removed Member From Class: ClassName=main Member=TP80
+Removed Member From Class: ClassName=main Member=TP81
+Removed Member From Class: ClassName=main Member=TP82
+Removed Member From Class: ClassName=main Member=TP83
+Removed Member From Class: ClassName=main Member=TP84
+Removed Member From Class: ClassName=main Member=TP85
+Removed Member From Class: ClassName=main Member=TP86
+Removed Member From Class: ClassName=main Member=TP87
+Removed Member From Class: ClassName=main Member=TP88
+Removed Member From Class: ClassName=main Member=TP89
+Removed Member From Class: ClassName=main Member=TP90
+Removed Member From Class: ClassName=main Member=TP91
+Removed Member From Class: ClassName=main Member=TP92
+Removed Member From Class: ClassName=main Member=TP93
+Removed Member From Class: ClassName=main Member=TP94
+Removed Member From Class: ClassName=main Member=TP95
+Removed Member From Class: ClassName=main Member=TP96
+Removed Member From Class: ClassName=main Member=TP97
+Removed Member From Class: ClassName=main Member=TP98
+Removed Member From Class: ClassName=main Member=TP99
+Removed Member From Class: ClassName=main Member=TP100
+Removed Member From Class: ClassName=main Member=TP101
+Removed Member From Class: ClassName=main Member=TP102
+Removed Member From Class: ClassName=main Member=TP103
+Removed Member From Class: ClassName=main Member=TP104
+Removed Member From Class: ClassName=main Member=X2
+Removed Member From Class: ClassName=main Member=X3
+Removed Member From Class: ClassName=main Member=X4
+Added Pin To Net: NetName=NetR49_2 Pin=R49-2
+Added Net: Name=NetR49_2
+Added Pin To Net: NetName=NetR50_2 Pin=R50-2
+Added Net: Name=NetR50_2
+Added Pin To Net: NetName=NetR51_2 Pin=R51-2
+Added Net: Name=NetR51_2
+Added Pin To Net: NetName=NetR52_2 Pin=R52-2
+Added Net: Name=NetR52_2
+Added Pin To Net: NetName=NetR53_2 Pin=R53-2
+Added Net: Name=NetR53_2
+Added Pin To Net: NetName=NetR54_2 Pin=R54-2
+Added Net: Name=NetR54_2
+Added Pin To Net: NetName=NetR55_2 Pin=R55-2
+Added Net: Name=NetR55_2
+Added Pin To Net: NetName=NetR56_2 Pin=R56-2
+Added Net: Name=NetR56_2
+Added Pin To Net: NetName=NetR57_2 Pin=R57-2
+Added Net: Name=NetR57_2
+Added Pin To Net: NetName=NetR58_2 Pin=R58-2
+Added Net: Name=NetR58_2
+Added Pin To Net: NetName=NetR59_2 Pin=R59-2
+Added Net: Name=NetR59_2
+Added Pin To Net: NetName=NetR60_2 Pin=R60-2
+Added Net: Name=NetR60_2
+Added Pin To Net: NetName=NetR61_2 Pin=R61-2
+Added Net: Name=NetR61_2
+Added Pin To Net: NetName=NetR62_2 Pin=R62-2
+Added Net: Name=NetR62_2
+Added Pin To Net: NetName=NetR63_2 Pin=R63-2
+Added Net: Name=NetR63_2
+Added Pin To Net: NetName=NetR64_2 Pin=R64-2
+Added Net: Name=NetR64_2
+Added Pin To Net: NetName=NetR65_2 Pin=R65-2
+Added Net: Name=NetR65_2
+Added Pin To Net: NetName=NetR66_2 Pin=R66-2
+Added Net: Name=NetR66_2
+Added Pin To Net: NetName=NetR67_2 Pin=R67-2
+Added Net: Name=NetR67_2
+Added Pin To Net: NetName=NetR68_2 Pin=R68-2
+Added Net: Name=NetR68_2
+Added Pin To Net: NetName=NetR69_2 Pin=R69-2
+Added Net: Name=NetR69_2
+Added Pin To Net: NetName=NetR70_2 Pin=R70-2
+Added Net: Name=NetR70_2
+Added Pin To Net: NetName=NetR71_2 Pin=R71-2
+Added Net: Name=NetR71_2
+Added Pin To Net: NetName=NetR72_2 Pin=R72-2
+Added Net: Name=NetR72_2
+Added Pin To Net: NetName=NetR73_2 Pin=R73-2
+Added Net: Name=NetR73_2
+Added Pin To Net: NetName=NetR74_2 Pin=R74-2
+Added Net: Name=NetR74_2
+Added Pin To Net: NetName=NetR75_2 Pin=R75-2
+Added Net: Name=NetR75_2
+Added Pin To Net: NetName=NetR76_2 Pin=R76-2
+Added Net: Name=NetR76_2
+Added Pin To Net: NetName=NetR77_2 Pin=R77-2
+Added Net: Name=NetR77_2
+Added Pin To Net: NetName=NetR78_2 Pin=R78-2
+Added Net: Name=NetR78_2
+Added Pin To Net: NetName=NetR79_2 Pin=R79-2
+Added Net: Name=NetR79_2
+Added Pin To Net: NetName=NetR80_2 Pin=R80-2
+Added Net: Name=NetR80_2
+Added Pin To Net: NetName=NetR81_2 Pin=R81-2
+Added Net: Name=NetR81_2
+Added Pin To Net: NetName=NetR82_2 Pin=R82-2
+Added Net: Name=NetR82_2
+Added Pin To Net: NetName=NetR83_2 Pin=R83-2
+Added Net: Name=NetR83_2
+Added Pin To Net: NetName=NetR84_2 Pin=R84-2
+Added Net: Name=NetR84_2
+Added Pin To Net: NetName=NetR85_2 Pin=R85-2
+Added Net: Name=NetR85_2
+Added Pin To Net: NetName=NetR86_2 Pin=R86-2
+Added Net: Name=NetR86_2
+Added Pin To Net: NetName=NetR87_2 Pin=R87-2
+Added Net: Name=NetR87_2
+Added Pin To Net: NetName=NetR88_2 Pin=R88-2
+Added Net: Name=NetR88_2
+Added Pin To Net: NetName=NetR89_2 Pin=R89-2
+Added Net: Name=NetR89_2
+Added Pin To Net: NetName=NetR90_2 Pin=R90-2
+Added Net: Name=NetR90_2
+Added Pin To Net: NetName=NetR91_2 Pin=R91-2
+Added Net: Name=NetR91_2
+Added Pin To Net: NetName=NetR92_2 Pin=R92-2
+Added Net: Name=NetR92_2
+Added Pin To Net: NetName=NetR93_2 Pin=R93-2
+Added Net: Name=NetR93_2
+Added Pin To Net: NetName=NetR94_2 Pin=R94-2
+Added Net: Name=NetR94_2
+Added Pin To Net: NetName=NetR95_2 Pin=R95-2
+Added Net: Name=NetR95_2
+Added Pin To Net: NetName=NetR96_2 Pin=R96-2
+Added Net: Name=NetR96_2
+Added Pin To Net: NetName=NetR97_2 Pin=R97-2
+Added Net: Name=NetR97_2
+Added Pin To Net: NetName=NetR98_2 Pin=R98-2
+Added Net: Name=NetR98_2
+Added Pin To Net: NetName=NetR99_2 Pin=R99-2
+Added Net: Name=NetR99_2
+Added Pin To Net: NetName=NetR100_2 Pin=R100-2
+Added Net: Name=NetR100_2
+Added Pin To Net: NetName=NetR101_2 Pin=R101-2
+Added Net: Name=NetR101_2
+Added Pin To Net: NetName=NetR102_2 Pin=R102-2
+Added Net: Name=NetR102_2
+Added Pin To Net: NetName=NetR103_2 Pin=R103-2
+Added Net: Name=NetR103_2
+Added Pin To Net: NetName=NetR104_2 Pin=R104-2
+Added Net: Name=NetR104_2
+Added Pin To Net: NetName=NetR105_2 Pin=R105-2
+Added Net: Name=NetR105_2
+Added Pin To Net: NetName=NetR106_2 Pin=R106-2
+Added Net: Name=NetR106_2
+Added Pin To Net: NetName=NetR107_2 Pin=R107-2
+Added Net: Name=NetR107_2
+Added Pin To Net: NetName=NetR108_2 Pin=R108-2
+Added Net: Name=NetR108_2

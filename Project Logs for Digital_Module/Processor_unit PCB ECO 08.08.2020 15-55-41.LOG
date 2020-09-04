@@ -1,0 +1,18 @@
+Added Component: Designator=R41(SMD_0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1к"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Назначение"; Value = "SMD-резистор"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Наименование"; Value = "Резистор"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Потребление, Вт"; Value = "0,001"; VariantName = "[No Variations]"
+Added Component: Designator=R42(SMD_0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1к"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Назначение"; Value = "SMD-резистор"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Наименование"; Value = "Резистор"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Потребление, Вт"; Value = "0,001"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=I2C_SDA Pin=R41-1
+Added Pin To Net: NetName=3.3V Pin=R41-2
+Added Pin To Net: NetName=I2C_SCL Pin=R42-1
+Added Pin To Net: NetName=3.3V Pin=R42-2
+Added Member To Class: ClassName=main Member=Component R41 10к
+Added Member To Class: ClassName=main Member=Component R42 10к

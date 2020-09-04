@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=CAN_RX_2 Pin=U4-73
+Added Net: Name=CAN_RX_2
+Added Pin To Net: NetName=CAN_TX_2 Pin=U4-74
+Added Net: Name=CAN_TX_2
+Added Member To Class: ClassName=main Member=Component C26 10לךװ
+Added Member To Class: ClassName=main Member=Component X3 Header 2X10

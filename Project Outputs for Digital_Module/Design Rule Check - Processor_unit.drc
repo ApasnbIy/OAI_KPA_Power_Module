@@ -1,0 +1,103 @@
+Protel Design System Design Rule Check
+PCB File : Z:\Devices\БДК2-М Глонасс-К2 ИЗ\03_РКД_КПА\КПА Электрические схемы\УЦМ (универсальный цифровой модуль)\Processor_unit.PcbDoc
+Date     : 02.09.2020
+Time     : 17:42:39
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Isolated copper: Split Plane  (GND) on Layer 2. Copper island connected to pads/vias detected. Copper area is : 2.39 sq. mm
+   Violation between Isolated copper: Split Plane  (GND) on Layer 2. Dead copper detected. Copper area is : 0.104 sq. mm
+   Violation between Isolated copper: Split Plane  (GND) on Layer 2. Dead copper detected. Copper area is : 0.104 sq. mm
+   Violation between Isolated copper: Split Plane  (GND) on Layer 2. Dead copper detected. Copper area is : 609.399 sq. mm
+   Violation between Isolated copper: Split Plane  (GND) on Layer 2. Dead copper detected. Copper area is : 610.683 sq. mm
+   Violation between Isolated copper: Split Plane  (GND_IN) on Layer 2. Dead copper detected. Copper area is : 2.839 sq. mm
+   Violation between Isolated copper: Split Plane  (USB_GND_IN) on Layer 2. Dead copper detected. Copper area is : 1.535 sq. mm
+Rule Violations :7
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=1mm) (Preferred=0.2mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+   Violation between Starved Thermal on Layer 2: Via (13mm,35.275mm) from Top Layer to Bottom Layer. Blocked 2 out of 4 entries.
+   Violation between Starved Thermal on Layer 2: Via (13mm,36.1mm) from Top Layer to Bottom Layer. Blocked 4 out of 4 entries.
+   Violation between Starved Thermal on Layer 2: Via (13mm,36.925mm) from Top Layer to Bottom Layer. Blocked 2 out of 4 entries.
+Rule Violations :3
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+   Violation between Net Antennae: Track (40.627mm,47.627mm)(56mm,47.627mm) on Layer 1 
+   Violation between Net Antennae: Track (44.813mm,43.465mm)(56mm,43.465mm) on Layer 1 
+   Violation between Net Antennae: Track (44.849mm,37.9mm)(56mm,37.9mm) on Layer 1 
+   Violation between Net Antennae: Track (45.265mm,41.865mm)(56mm,41.865mm) on Layer 1 
+   Violation between Net Antennae: Track (45.265mm,43.065mm)(56mm,43.065mm) on Layer 1 
+   Violation between Net Antennae: Track (45.299mm,43.9mm)(56mm,43.9mm) on Layer 1 
+   Violation between Net Antennae: Track (45.399mm,41.465mm)(56mm,41.465mm) on Layer 1 
+   Violation between Net Antennae: Track (45.565mm,41.065mm)(56mm,41.065mm) on Layer 1 
+   Violation between Net Antennae: Track (45.617mm,23.283mm)(56mm,23.283mm) on Top Layer 
+   Violation between Net Antennae: Track (45.766mm,23.7mm)(56mm,23.7mm) on Top Layer 
+   Violation between Net Antennae: Track (46.034mm,51.1mm)(56mm,51.1mm) on Layer 1 
+   Violation between Net Antennae: Track (46.649mm,48.4mm)(56mm,48.4mm) on Layer 1 
+   Violation between Net Antennae: Track (47.546mm,37.5mm)(56mm,37.5mm) on Layer 1 
+   Violation between Net Antennae: Track (47.903mm,37.1mm)(56mm,37.1mm) on Layer 1 
+   Violation between Net Antennae: Track (48.293mm,51.8mm)(56mm,51.8mm) on Layer 1 
+   Violation between Net Antennae: Track (48.651mm,27.1mm)(56mm,27.1mm) on Layer 1 
+   Violation between Net Antennae: Track (48.995mm,27.505mm)(56mm,27.505mm) on Layer 1 
+   Violation between Net Antennae: Track (49.363mm,27.905mm)(56mm,27.905mm) on Layer 1 
+   Violation between Net Antennae: Track (50.625mm,35.9mm)(56mm,35.9mm) on Layer 1 
+   Violation between Net Antennae: Track (50.713mm,49.188mm)(56mm,49.188mm) on Bottom Layer 
+   Violation between Net Antennae: Track (50.797mm,45.9mm)(56mm,45.9mm) on Layer 1 
+   Violation between Net Antennae: Track (50.851mm,25.9mm)(56mm,25.9mm) on Layer 1 
+   Violation between Net Antennae: Track (50.851mm,39.7mm)(56mm,39.7mm) on Layer 1 
+   Violation between Net Antennae: Track (50.8mm,39.1mm)(56mm,39.1mm) on Layer 1 
+   Violation between Net Antennae: Track (50.951mm,35.3mm)(56mm,35.3mm) on Layer 1 
+   Violation between Net Antennae: Track (51.025mm,45.5mm)(56mm,45.5mm) on Layer 1 
+   Violation between Net Antennae: Track (51.138mm,49.626mm)(56mm,49.626mm) on Bottom Layer 
+   Violation between Net Antennae: Track (51.158mm,47.317mm)(56mm,47.317mm) on Top Layer 
+   Violation between Net Antennae: Track (51.191mm,45.1mm)(56mm,45.1mm) on Layer 1 
+   Violation between Net Antennae: Track (51.251mm,25.5mm)(56mm,25.5mm) on Layer 1 
+   Violation between Net Antennae: Track (51.284mm,49.542mm)(56mm,49.542mm) on Layer 1 
+   Violation between Net Antennae: Track (51.303mm,50.026mm)(56mm,50.026mm) on Bottom Layer 
+   Violation between Net Antennae: Track (51.403mm,29.878mm)(56mm,29.878mm) on Layer 1 
+   Violation between Net Antennae: Track (51.469mm,50.426mm)(56mm,50.426mm) on Bottom Layer 
+   Violation between Net Antennae: Track (51.476mm,47.755mm)(56mm,47.755mm) on Top Layer 
+   Violation between Net Antennae: Track (51.4mm,50mm)(56mm,50mm) on Layer 1 
+   Violation between Net Antennae: Track (52.149mm,34.8mm)(56mm,34.8mm) on Layer 1 
+   Violation between Net Antennae: Track (52.162mm,53.283mm)(56mm,53.283mm) on Layer 1 
+   Violation between Net Antennae: Track (52.168mm,29.4mm)(56mm,29.4mm) on Layer 1 
+   Violation between Net Antennae: Track (52.214mm,53.9mm)(56mm,53.9mm) on Layer 1 
+   Violation between Net Antennae: Track (52.25mm,55.25mm)(56mm,55.25mm) on Layer 1 
+   Violation between Net Antennae: Track (52.314mm,34.4mm)(56mm,34.4mm) on Layer 1 
+   Violation between Net Antennae: Track (52.348mm,54.6mm)(56mm,54.6mm) on Layer 1 
+   Violation between Net Antennae: Track (52.9mm,34mm)(56mm,34mm) on Layer 1 
+   Violation between Net Antennae: Track (53.034mm,32.7mm)(56mm,32.7mm) on Layer 1 
+   Violation between Net Antennae: Track (53.084mm,31.8mm)(56mm,31.8mm) on Layer 1 
+   Violation between Net Antennae: Track (53.844mm,55.65mm)(56mm,55.65mm) on Layer 1 
+   Violation between Net Antennae: Track (53.8mm,31.3mm)(56mm,31.3mm) on Layer 1 
+   Violation between Net Antennae: Track (54.151mm,56.05mm)(56mm,56.05mm) on Layer 1 
+   Violation between Net Antennae: Track (54.537mm,51.9mm)(56mm,51.9mm) on Bottom Layer 
+   Violation between Net Antennae: Track (54.703mm,51.5mm)(56mm,51.5mm) on Bottom Layer 
+   Violation between Net Antennae: Track (54.869mm,51.1mm)(56mm,51.1mm) on Bottom Layer 
+   Violation between Net Antennae: Track (54.8mm,30.5mm)(56mm,30.5mm) on Layer 1 
+   Violation between Net Antennae: Track (55.22mm,22.8mm)(56mm,22.8mm) on Top Layer 
+Rule Violations :54
+
+Processing Rule : Matched Lengths(Tolerance=0.5mm) (InDifferentialPair('No Differential Pair'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 64
+Waived Violations : 0
+Time Elapsed        : 00:00:01
