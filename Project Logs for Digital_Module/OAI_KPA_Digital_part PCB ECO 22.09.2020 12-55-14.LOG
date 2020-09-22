@@ -1,0 +1,15 @@
+Added Class: Name=ADC_Filter
+Added Class: Name=DAC_Filter
+Added Class: Name=Designator
+Added Class: Name=Device_unit
+Added Class: Name=Digital_module
+Added Class: Name=Module_main
+Added Class: Name=Power
+Added Class: Name=USB
+Added Differential Pair: Name=D_IN_1
+Added Differential Pair: Name=D_IN_2
+Added Differential Pair: Name=D_IN_3
+Added Differential Pair: Name=Out_D_1_MB
+Added Differential Pair: Name=Out_D_2
+Added Differential Pair: Name=Out_D_M1
+Added Differential Pair: Name=Out_D_M2
