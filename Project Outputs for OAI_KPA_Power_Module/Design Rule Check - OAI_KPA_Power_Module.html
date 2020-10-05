@@ -1,0 +1,501 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">05.10.2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">13:48:11</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc" class="file"><acronym title="G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc">G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">59</td></tr>
+</table>
+</td>
+</table><a name="IDBPAAB4TPBKAOSGKXJTSOFFI4LLVB3ZAU42MRGCWCPHUBZYEFNXE"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPKXTIYYGYFAWFCJEY3GR2O3IREM3KTRIF12ZUDLCE5BDI5EMNLNF">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQ03J3SADJVOZLP3DQTA1FMJWIGLBTRCC1440EMWZIQTKGWIYQPH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMTJBYCYJE3NJLQKT1FJVD51LUD3SQJLRKTJJPALXFFF52XBDPJPN">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSJBGDJXXQQ2AHE1CJHJ2QDSWZKHHDFIPL4ZIC1NZUMQ0VIN1ZKNC">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXIJB52VNRNMJJYPBIRCZ2FWFYMROGRNLSBQIWOORW4PWSZTUCLTP">Width Constraint (Min=0.2mm) (Max=5mm) (Preferred=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUNA5E2RQNCGSLCO4CYDAJ3ZGTIPGMFFCPJHAU1NQSZ1KMCOBYDUK">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.3mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2MTDB03RNUB2NPATSMYPNPQ2HEWHBYLEGFITPSJNNUP2OGK5OLAL">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYOPCZEYINGS2MQR5INFOKJ3ATG1RZKDNODXCQBEQ0M1ILOM5NZWH">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDY24ETOMC05GP4DTZONS33BOIEKVM4VCXLRCZ1E422LAYQAGNBJG">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">54</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN4U3XKBTJM03M3JWID2FIVY2Y2JW3FYFXXUXAETJS1GGTPYRUEO">Matched Lengths(Tolerance=0.5mm) (InDifferentialPair('No Differential Pair'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU5G4F0XVFPMVKXG41GXOJ42KLGOQN4EZWE1I22CN4XRCA51UWU3I">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">59</td>
+</tr>
+</table><br><a name="IDMTJBYCYJE3NJLQKT1FJVD51LUD3SQJLRKTJJPALXFFF52XBDPJPN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7500mil|Location2.X=7639.431mil|Location1.Y=751.157mil|Location2.Y=784.651mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7500mil|Location2.X=7639.431mil|Location1.Y=751.157mil|Location2.Y=784.651mil|Absolute=True">Isolated copper: Split Plane  (GND) on Internal Plane 2. Dead copper detected. Copper area is : 2.372 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.042mil|Location2.X=13206.36mil|Location1.Y=550.176mil|Location2.Y=784.651mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.042mil|Location2.X=13206.36mil|Location1.Y=550.176mil|Location2.Y=784.651mil|Absolute=True">Isolated copper: Split Plane  (GND) on Internal Plane 2. Dead copper detected. Copper area is : 608.56 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.042mil|Location2.X=13206.36mil|Location1.Y=2826.688mil|Location2.Y=3061.163mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.042mil|Location2.X=13206.36mil|Location1.Y=2826.688mil|Location2.Y=3061.163mil|Absolute=True">Isolated copper: Split Plane  (GND) on Internal Plane 2. Dead copper detected. Copper area is : 609.892 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7500mil|Location2.X=7639.431mil|Location1.Y=2826.688mil|Location2.Y=2845.736mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7500mil|Location2.X=7639.431mil|Location1.Y=2826.688mil|Location2.Y=2845.736mil|Absolute=True">Isolated copper: Split Plane  (USB_GND_IN) on Internal Plane 2. Dead copper detected. Copper area is : 1.084 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7570.88mil|Location2.X=10015.433mil|Location1.Y=1583.163mil|Location2.Y=1598.583mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7570.88mil|Location2.X=10015.433mil|Location1.Y=1583.163mil|Location2.Y=1598.583mil|Absolute=True">Un-Routed Net Constraint: Net Power_IN Between Track (8.888mm,17.412mm)(8.888mm,21.888mm) on Top Layer And Track (65.9mm,17.2mm)(66mm,17.3mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDY24ETOMC05GP4DTZONS33BOIEKVM4VCXLRCZ1E422LAYQAGNBJG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12990.897mil|Location2.X=13029.313mil|Location1.Y=2577.76mil|Location2.Y=2636.513mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12990.897mil|Location2.X=13029.313mil|Location1.Y=2577.76mil|Location2.Y=2636.513mil|Absolute=True">Net Antennae: Track (144.406mm,45mm)(145.4mm,45mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2759.734mil|Location2.Y=2790.117mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2759.734mil|Location2.Y=2790.117mil|Absolute=True">Net Antennae: Track (32.584mm,49.422mm)(46mm,49.422mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2743.986mil|Location2.Y=2774.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2743.986mil|Location2.Y=2774.369mil|Absolute=True">Net Antennae: Track (34.722mm,49.022mm)(46mm,49.022mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2728.238mil|Location2.Y=2758.621mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2728.238mil|Location2.Y=2758.621mil|Absolute=True">Net Antennae: Track (35.25mm,48.622mm)(46mm,48.622mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2711.618mil|Location2.Y=2742.001mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2711.618mil|Location2.Y=2742.001mil|Absolute=True">Net Antennae: Track (36.151mm,48.2mm)(46mm,48.2mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2695.87mil|Location2.Y=2726.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2695.87mil|Location2.Y=2726.253mil|Absolute=True">Net Antennae: Track (37.808mm,47.8mm)(46mm,47.8mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1946.195mil|Location2.Y=1976.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1946.195mil|Location2.Y=1976.578mil|Absolute=True">Net Antennae: Track (39.875mm,28.758mm)(46mm,28.758mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1961.943mil|Location2.Y=1992.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1961.943mil|Location2.Y=1992.326mil|Absolute=True">Net Antennae: Track (40.542mm,29.158mm)(46mm,29.158mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2397.715mil|Location2.Y=2428.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2397.715mil|Location2.Y=2428.098mil|Absolute=True">Net Antennae: Track (40.627mm,40.227mm)(46mm,40.227mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1873.035mil|Location2.Y=1903.419mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1873.035mil|Location2.Y=1903.419mil|Absolute=True">Net Antennae: Track (40.885mm,26.9mm)(46mm,26.9mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2558.075mil|Location2.Y=2588.458mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2558.075mil|Location2.Y=2588.458mil|Absolute=True">Net Antennae: Track (41.2mm,44.3mm)(46mm,44.3mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2515.752mil|Location2.Y=2546.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2515.752mil|Location2.Y=2546.135mil|Absolute=True">Net Antennae: Track (42.062mm,43.225mm)(46mm,43.225mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2478.621mil|Location2.Y=2509.004mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2478.621mil|Location2.Y=2509.004mil|Absolute=True">Net Antennae: Track (42.099mm,42.282mm)(46mm,42.282mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2500.004mil|Location2.Y=2530.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2500.004mil|Location2.Y=2530.387mil|Absolute=True">Net Antennae: Track (42.304mm,42.825mm)(46mm,42.825mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2459.65mil|Location2.Y=2490.033mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2459.65mil|Location2.Y=2490.033mil|Absolute=True">Net Antennae: Track (43.036mm,41.8mm)(46mm,41.8mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1977.691mil|Location2.Y=2008.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1977.691mil|Location2.Y=2008.074mil|Absolute=True">Net Antennae: Track (43.142mm,29.558mm)(46mm,29.558mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2477.675mil|Location2.Y=2508.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2477.675mil|Location2.Y=2508.058mil|Absolute=True">Net Antennae: Track (43.144mm,42.258mm)(46mm,42.258mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2541.64mil|Location2.Y=2572.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2541.64mil|Location2.Y=2572.023mil|Absolute=True">Net Antennae: Track (43.305mm,43.883mm)(46mm,43.883mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2493.423mil|Location2.Y=2523.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2493.423mil|Location2.Y=2523.806mil|Absolute=True">Net Antennae: Track (43.31mm,42.658mm)(46mm,42.658mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2557.388mil|Location2.Y=2587.771mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2557.388mil|Location2.Y=2587.771mil|Absolute=True">Net Antennae: Track (43.471mm,44.283mm)(46mm,44.283mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2509.171mil|Location2.Y=2539.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2509.171mil|Location2.Y=2539.554mil|Absolute=True">Net Antennae: Track (43.475mm,43.058mm)(46mm,43.058mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1373.035mil|Location2.Y=1403.418mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1373.035mil|Location2.Y=1403.418mil|Absolute=True">Net Antennae: Track (43.726mm,14.2mm)(46mm,14.2mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1660.437mil|Location2.Y=1690.82mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1660.437mil|Location2.Y=1690.82mil|Absolute=True">Net Antennae: Track (44.1mm,21.5mm)(46mm,21.5mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1695.87mil|Location2.Y=1726.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1695.87mil|Location2.Y=1726.253mil|Absolute=True">Net Antennae: Track (44.2mm,22.4mm)(46mm,22.4mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1714.701mil|Location2.Y=1745.084mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1714.701mil|Location2.Y=1745.084mil|Absolute=True">Net Antennae: Track (44.322mm,22.878mm)(46mm,22.878mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1562.012mil|Location2.Y=1592.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1562.012mil|Location2.Y=1592.395mil|Absolute=True">Net Antennae: Track (44.5mm,19mm)(46mm,19mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2046.264mil|Location2.Y=2076.647mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2046.264mil|Location2.Y=2076.647mil|Absolute=True">Net Antennae: Track (44.628mm,31.3mm)(46mm,31.3mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1542.327mil|Location2.Y=1572.71mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1542.327mil|Location2.Y=1572.71mil|Absolute=True">Net Antennae: Track (44.698mm,18.5mm)(46mm,18.5mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1644.689mil|Location2.Y=1675.072mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1644.689mil|Location2.Y=1675.072mil|Absolute=True">Net Antennae: Track (44.6mm,21.1mm)(46mm,21.1mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1730.449mil|Location2.Y=1760.832mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1730.449mil|Location2.Y=1760.832mil|Absolute=True">Net Antennae: Track (44.791mm,23.278mm)(46mm,23.278mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2233.843mil|Location2.Y=2264.226mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2233.843mil|Location2.Y=2264.226mil|Absolute=True">Net Antennae: Track (44.813mm,36.065mm)(46mm,36.065mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2062.012mil|Location2.Y=2092.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2062.012mil|Location2.Y=2092.395mil|Absolute=True">Net Antennae: Track (44.832mm,31.7mm)(46mm,31.7mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2014.768mil|Location2.Y=2045.151mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2014.768mil|Location2.Y=2045.151mil|Absolute=True">Net Antennae: Track (44.849mm,30.5mm)(46mm,30.5mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1526.579mil|Location2.Y=1556.962mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1526.579mil|Location2.Y=1556.962mil|Absolute=True">Net Antennae: Track (44.921mm,18.1mm)(46mm,18.1mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1747.051mil|Location2.Y=1777.434mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1747.051mil|Location2.Y=1777.434mil|Absolute=True">Net Antennae: Track (44.947mm,23.7mm)(46mm,23.7mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1676.185mil|Location2.Y=1706.568mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1676.185mil|Location2.Y=1706.568mil|Absolute=True">Net Antennae: Track (44mm,21.9mm)(46mm,21.9mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1810.041mil|Location2.Y=1840.424mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1810.041mil|Location2.Y=1840.424mil|Absolute=True">Net Antennae: Track (45.097mm,25.3mm)(46mm,25.3mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1762.799mil|Location2.Y=1793.182mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1762.799mil|Location2.Y=1793.182mil|Absolute=True">Net Antennae: Track (45.113mm,24.1mm)(46mm,24.1mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2313.98mil|Location2.Y=2344.363mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2313.98mil|Location2.Y=2344.363mil|Absolute=True">Net Antennae: Track (45.234mm,38.1mm)(46mm,38.1mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2638.03mil|Location2.Y=2668.413mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2638.03mil|Location2.Y=2668.413mil|Absolute=True">Net Antennae: Track (45.251mm,46.331mm)(46mm,46.331mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2170.851mil|Location2.Y=2201.234mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2170.851mil|Location2.Y=2201.234mil|Absolute=True">Net Antennae: Track (45.265mm,34.465mm)(46mm,34.465mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2218.095mil|Location2.Y=2248.478mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2218.095mil|Location2.Y=2248.478mil|Absolute=True">Net Antennae: Track (45.265mm,35.665mm)(46mm,35.665mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1778.547mil|Location2.Y=1808.93mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1778.547mil|Location2.Y=1808.93mil|Absolute=True">Net Antennae: Track (45.278mm,24.5mm)(46mm,24.5mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2250.988mil|Location2.Y=2281.371mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2250.988mil|Location2.Y=2281.371mil|Absolute=True">Net Antennae: Track (45.299mm,36.5mm)(46mm,36.5mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2298.232mil|Location2.Y=2328.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2298.232mil|Location2.Y=2328.615mil|Absolute=True">Net Antennae: Track (45.299mm,37.7mm)(46mm,37.7mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2155.103mil|Location2.Y=2185.486mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2155.103mil|Location2.Y=2185.486mil|Absolute=True">Net Antennae: Track (45.399mm,34.065mm)(46mm,34.065mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2622.282mil|Location2.Y=2652.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2622.282mil|Location2.Y=2652.665mil|Absolute=True">Net Antennae: Track (45.417mm,45.931mm)(46mm,45.931mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2329.728mil|Location2.Y=2360.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2329.728mil|Location2.Y=2360.111mil|Absolute=True">Net Antennae: Track (45.4mm,38.5mm)(46mm,38.5mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2139.355mil|Location2.Y=2169.738mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2139.355mil|Location2.Y=2169.738mil|Absolute=True">Net Antennae: Track (45.565mm,33.665mm)(46mm,33.665mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2606.534mil|Location2.Y=2636.917mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=2606.534mil|Location2.Y=2636.917mil|Absolute=True">Net Antennae: Track (45.582mm,45.531mm)(46mm,45.531mm) on Mid-Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1439.289mil|Location2.Y=1469.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1439.289mil|Location2.Y=1469.672mil|Absolute=True">Net Antennae: Track (45.617mm,15.883mm)(46mm,15.883mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1455.713mil|Location2.Y=1486.096mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9124.531mil|Location2.X=9145.806mil|Location1.Y=1455.713mil|Location2.Y=1486.096mil|Absolute=True">Net Antennae: Track (45.766mm,16.3mm)(46mm,16.3mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9327.584mil|Location2.X=9348.859mil|Location1.Y=2385.522mil|Location2.Y=2415.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9327.584mil|Location2.X=9348.859mil|Location1.Y=2385.522mil|Location2.Y=2415.905mil|Absolute=True">Net Antennae: Track (49.487mm,41.587mm)(51.158mm,39.917mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=G:\%D0%9E%D0%90%D0%98 %D0%9A%D0%9F%D0%90 %D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9340.112mil|Location2.X=9361.386mil|Location1.Y=2402.759mil|Location2.Y=2433.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=G:\ОАИ КПА Модуль питания\OAI_KPA_Power_Module.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9340.112mil|Location2.X=9361.386mil|Location1.Y=2402.759mil|Location2.Y=2433.142mil|Absolute=True">Net Antennae: Track (50.725mm,41.106mm)(51.476mm,40.355mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,9 +1,0 @@
-Added Pin To Net: NetName=Power_IN Pin=X4-6
-Added Pin To Net: NetName=Power_IN Pin=X4-8
-Added Pin To Net: NetName=GND_IN Pin=X4-10
-Added Pin To Net: NetName=GND_IN Pin=X4-12
-Added Pin To Net: NetName=GND_IN Pin=X5-1
-Added Pin To Net: NetName=GND_IN Pin=X5-2
-Added Pin To Net: NetName=GND_IN Pin=X5-3
-Added Pin To Net: NetName=GND_IN Pin=X5-4
-Added Member To Class: ClassName=Designator Member=Component X4 Header 2X6
